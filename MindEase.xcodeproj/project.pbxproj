@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C00D3EC2DC14D89004C1005 /* MindEaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D3EB2DC14D89004C1005 /* MindEaseApp.swift */; };
+		3C00D3EE2DC14D89004C1005 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D3ED2DC14D89004C1005 /* Persistence.swift */; };
+		3C00D3F12DC14D89004C1005 /* MindEase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D3EF2DC14D89004C1005 /* MindEase.xcdatamodeld */; };
+		3C00D3F32DC14D89004C1005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D3F22DC14D89004C1005 /* ContentView.swift */; };
+		3C00D3F52DC14D8A004C1005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C00D3F42DC14D8A004C1005 /* Assets.xcassets */; };
+		3C00D3F92DC14D8A004C1005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C00D3F82DC14D8A004C1005 /* Preview Assets.xcassets */; };
+		3C00D4032DC14D8B004C1005 /* MindEaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D4022DC14D8B004C1005 /* MindEaseTests.swift */; };
+		3C00D40D2DC14D8B004C1005 /* MindEaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D40C2DC14D8B004C1005 /* MindEaseUITests.swift */; };
+		3C00D40F2DC14D8B004C1005 /* MindEaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C00D40E2DC14D8B004C1005 /* MindEaseUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C00D3FF2DC14D8B004C1005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C00D3E02DC14D89004C1005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C00D3E72DC14D89004C1005;
+			remoteInfo = MindEase;
+		};
+		3C00D4092DC14D8B004C1005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C00D3E02DC14D89004C1005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C00D3E72DC14D89004C1005;
+			remoteInfo = MindEase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C00D3E82DC14D89004C1005 /* MindEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C00D3EB2DC14D89004C1005 /* MindEaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindEaseApp.swift; sourceTree = "<group>"; };
+		3C00D3ED2DC14D89004C1005 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3C00D3F02DC14D89004C1005 /* MindEase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MindEase.xcdatamodel; sourceTree = "<group>"; };
+		3C00D3F22DC14D89004C1005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3C00D3F42DC14D8A004C1005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C00D3F62DC14D8A004C1005 /* MindEase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindEase.entitlements; sourceTree = "<group>"; };
+		3C00D3F82DC14D8A004C1005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C00D3FE2DC14D8B004C1005 /* MindEaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindEaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C00D4022DC14D8B004C1005 /* MindEaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindEaseTests.swift; sourceTree = "<group>"; };
+		3C00D4082DC14D8B004C1005 /* MindEaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindEaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C00D40C2DC14D8B004C1005 /* MindEaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindEaseUITests.swift; sourceTree = "<group>"; };
+		3C00D40E2DC14D8B004C1005 /* MindEaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindEaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C00D3E52DC14D89004C1005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C00D3FB2DC14D8B004C1005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C00D4052DC14D8B004C1005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C00D3DF2DC14D89004C1005 = {
+			isa = PBXGroup;
+			children = (
+				3C00D3EA2DC14D89004C1005 /* MindEase */,
+				3C00D4012DC14D8B004C1005 /* MindEaseTests */,
+				3C00D40B2DC14D8B004C1005 /* MindEaseUITests */,
+				3C00D3E92DC14D89004C1005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C00D3E92DC14D89004C1005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C00D3E82DC14D89004C1005 /* MindEase.app */,
+				3C00D3FE2DC14D8B004C1005 /* MindEaseTests.xctest */,
+				3C00D4082DC14D8B004C1005 /* MindEaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C00D3EA2DC14D89004C1005 /* MindEase */ = {
+			isa = PBXGroup;
+			children = (
+				3C00D3EB2DC14D89004C1005 /* MindEaseApp.swift */,
+				3C00D3ED2DC14D89004C1005 /* Persistence.swift */,
+				3C00D3F22DC14D89004C1005 /* ContentView.swift */,
+				3C00D3F42DC14D8A004C1005 /* Assets.xcassets */,
+				3C00D3F62DC14D8A004C1005 /* MindEase.entitlements */,
+				3C00D3EF2DC14D89004C1005 /* MindEase.xcdatamodeld */,
+				3C00D3F72DC14D8A004C1005 /* Preview Content */,
+			);
+			path = MindEase;
+			sourceTree = "<group>";
+		};
+		3C00D3F72DC14D8A004C1005 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3C00D3F82DC14D8A004C1005 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C00D4012DC14D8B004C1005 /* MindEaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C00D4022DC14D8B004C1005 /* MindEaseTests.swift */,
+			);
+			path = MindEaseTests;
+			sourceTree = "<group>";
+		};
+		3C00D40B2DC14D8B004C1005 /* MindEaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C00D40C2DC14D8B004C1005 /* MindEaseUITests.swift */,
+				3C00D40E2DC14D8B004C1005 /* MindEaseUITestsLaunchTests.swift */,
+			);
+			path = MindEaseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C00D3E72DC14D89004C1005 /* MindEase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C00D4122DC14D8B004C1005 /* Build configuration list for PBXNativeTarget "MindEase" */;
+			buildPhases = (
+				3C00D3E42DC14D89004C1005 /* Sources */,
+				3C00D3E52DC14D89004C1005 /* Frameworks */,
+				3C00D3E62DC14D89004C1005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindEase;
+			productName = MindEase;
+			productReference = 3C00D3E82DC14D89004C1005 /* MindEase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C00D3FD2DC14D8B004C1005 /* MindEaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C00D4152DC14D8B004C1005 /* Build configuration list for PBXNativeTarget "MindEaseTests" */;
+			buildPhases = (
+				3C00D3FA2DC14D8B004C1005 /* Sources */,
+				3C00D3FB2DC14D8B004C1005 /* Frameworks */,
+				3C00D3FC2DC14D8B004C1005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C00D4002DC14D8B004C1005 /* PBXTargetDependency */,
+			);
+			name = MindEaseTests;
+			productName = MindEaseTests;
+			productReference = 3C00D3FE2DC14D8B004C1005 /* MindEaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C00D4072DC14D8B004C1005 /* MindEaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C00D4182DC14D8B004C1005 /* Build configuration list for PBXNativeTarget "MindEaseUITests" */;
+			buildPhases = (
+				3C00D4042DC14D8B004C1005 /* Sources */,
+				3C00D4052DC14D8B004C1005 /* Frameworks */,
+				3C00D4062DC14D8B004C1005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C00D40A2DC14D8B004C1005 /* PBXTargetDependency */,
+			);
+			name = MindEaseUITests;
+			productName = MindEaseUITests;
+			productReference = 3C00D4082DC14D8B004C1005 /* MindEaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C00D3E02DC14D89004C1005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					3C00D3E72DC14D89004C1005 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					3C00D3FD2DC14D8B004C1005 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3C00D3E72DC14D89004C1005;
+					};
+					3C00D4072DC14D8B004C1005 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3C00D3E72DC14D89004C1005;
+					};
+				};
+			};
+			buildConfigurationList = 3C00D3E32DC14D89004C1005 /* Build configuration list for PBXProject "MindEase" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C00D3DF2DC14D89004C1005;
+			productRefGroup = 3C00D3E92DC14D89004C1005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C00D3E72DC14D89004C1005 /* MindEase */,
+				3C00D3FD2DC14D8B004C1005 /* MindEaseTests */,
+				3C00D4072DC14D8B004C1005 /* MindEaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C00D3E62DC14D89004C1005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C00D3F92DC14D8A004C1005 /* Preview Assets.xcassets in Resources */,
+				3C00D3F52DC14D8A004C1005 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C00D3FC2DC14D8B004C1005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C00D4062DC14D8B004C1005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C00D3E42DC14D89004C1005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C00D3EC2DC14D89004C1005 /* MindEaseApp.swift in Sources */,
+				3C00D3EE2DC14D89004C1005 /* Persistence.swift in Sources */,
+				3C00D3F32DC14D89004C1005 /* ContentView.swift in Sources */,
+				3C00D3F12DC14D89004C1005 /* MindEase.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C00D3FA2DC14D8B004C1005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C00D4032DC14D8B004C1005 /* MindEaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C00D4042DC14D8B004C1005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C00D40F2DC14D8B004C1005 /* MindEaseUITestsLaunchTests.swift in Sources */,
+				3C00D40D2DC14D8B004C1005 /* MindEaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C00D4002DC14D8B004C1005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C00D3E72DC14D89004C1005 /* MindEase */;
+			targetProxy = 3C00D3FF2DC14D8B004C1005 /* PBXContainerItemProxy */;
+		};
+		3C00D40A2DC14D8B004C1005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C00D3E72DC14D89004C1005 /* MindEase */;
+			targetProxy = 3C00D4092DC14D8B004C1005 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3C00D4102DC14D8B004C1005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C00D4112DC14D8B004C1005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3C00D4132DC14D8B004C1005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MindEase/MindEase.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MindEase/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nafisholeh.MindEase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C00D4142DC14D8B004C1005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MindEase/MindEase.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MindEase/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nafisholeh.MindEase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C00D4162DC14D8B004C1005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nafisholeh.MindEaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindEase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindEase";
+			};
+			name = Debug;
+		};
+		3C00D4172DC14D8B004C1005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nafisholeh.MindEaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindEase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MindEase";
+			};
+			name = Release;
+		};
+		3C00D4192DC14D8B004C1005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nafisholeh.MindEaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MindEase;
+			};
+			name = Debug;
+		};
+		3C00D41A2DC14D8B004C1005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nafisholeh.MindEaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MindEase;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C00D3E32DC14D89004C1005 /* Build configuration list for PBXProject "MindEase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C00D4102DC14D8B004C1005 /* Debug */,
+				3C00D4112DC14D8B004C1005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C00D4122DC14D8B004C1005 /* Build configuration list for PBXNativeTarget "MindEase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C00D4132DC14D8B004C1005 /* Debug */,
+				3C00D4142DC14D8B004C1005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C00D4152DC14D8B004C1005 /* Build configuration list for PBXNativeTarget "MindEaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C00D4162DC14D8B004C1005 /* Debug */,
+				3C00D4172DC14D8B004C1005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C00D4182DC14D8B004C1005 /* Build configuration list for PBXNativeTarget "MindEaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C00D4192DC14D8B004C1005 /* Debug */,
+				3C00D41A2DC14D8B004C1005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C00D3EF2DC14D89004C1005 /* MindEase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C00D3F02DC14D89004C1005 /* MindEase.xcdatamodel */,
+			);
+			currentVersion = 3C00D3F02DC14D89004C1005 /* MindEase.xcdatamodel */;
+			path = MindEase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3C00D3E02DC14D89004C1005 /* Project object */;
+}
