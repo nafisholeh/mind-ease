@@ -1,0 +1,7 @@
+[
+    {
+        "key": "cmd+shift+x",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Sync to Xcode"
+    }
+]
