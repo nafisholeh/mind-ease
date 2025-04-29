@@ -3,7 +3,14 @@
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
+    <entity name="MoodEntry" representedClassName="MoodEntry" syncable="YES" codeGenerationType="class">
+        <attribute name="contextFactors" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="moodLevel" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="MoodEntry" positionX="-63" positionY="0" width="128" height="89"/>
     </elements>
 </model>
