@@ -27,29 +27,49 @@ struct MoodEntryRow: View {
     }()
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                // Date and time
-                VStack(alignment: .leading) {
-                    Text(dateFormatter.string(from: entry.date ?? Date()))
-                        .font(.headline)
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .center) {
+                // Mood emoji with background
+                ZStack {
+                    Circle()
+                        .fill(moodLevel.color.opacity(0.15))
+                        .frame(width: 50, height: 50)
 
-                    Text(timeFormatter.string(from: entry.date ?? Date()))
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+                    Text(moodLevel.emoji)
+                        .font(.system(size: 30))
+                        .shadow(color: .gray.opacity(0.1), radius: 1, x: 0, y: 1)
+                }
+                .padding(.trailing, 8)
+
+                // Date, time and mood description
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(moodLevel.description)
+                        .font(.system(size: 17, weight: .semibold))
+                        .foregroundColor(moodLevel.color)
+
+                    HStack(spacing: 4) {
+                        Text(dateFormatter.string(from: entry.date ?? Date()))
+                            .font(.system(size: 14))
+                            .foregroundColor(.secondary)
+
+                        Text("•")
+                            .font(.system(size: 14))
+                            .foregroundColor(.secondary)
+
+                        Text(timeFormatter.string(from: entry.date ?? Date()))
+                            .font(.system(size: 14))
+                            .foregroundColor(.secondary)
+                    }
                 }
 
                 Spacer()
 
-                // Mood emoji and level
-                HStack {
-                    Text(moodLevel.emoji)
-                        .font(.system(size: 30))
-
-                    Text(moodLevel.description)
-                        .font(.headline)
-                        .foregroundColor(moodLevel.color)
-                }
+                // Chevron indicator for iOS
+                #if os(iOS)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.gray.opacity(0.5))
+                #endif
             }
 
             // Context factors if any
@@ -57,31 +77,49 @@ struct MoodEntryRow: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
                         ForEach(contextFactors) { factor in
-                            HStack {
+                            HStack(spacing: 4) {
                                 Image(systemName: factor.iconName)
-                                    .font(.caption)
+                                    .font(.system(size: 12))
+                                    .foregroundColor(.blue)
 
                                 Text(factor.rawValue)
-                                    .font(.caption)
+                                    .font(.system(size: 13, weight: .medium))
+                                    .foregroundColor(.primary.opacity(0.8))
                             }
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(8)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 6)
+                            .background(
+                                Capsule()
+                                    .fill(Color.blue.opacity(0.08))
+                            )
+                            .overlay(
+                                Capsule()
+                                    .stroke(Color.blue.opacity(0.1), lineWidth: 1)
+                            )
                         }
                     }
+                    .padding(.vertical, 4)
                 }
             }
 
             // Notes if any
             if let notes = entry.notes, !notes.isEmpty {
                 Text(notes)
-                    .font(.body)
+                    .font(.system(size: 15))
                     .foregroundColor(.secondary)
                     .lineLimit(2)
+                    .padding(.top, 2)
             }
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 8)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.white)
+                .shadow(color: Color.gray.opacity(0.1), radius: 5, x: 0, y: 2)
+        )
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
     }
 }
 
