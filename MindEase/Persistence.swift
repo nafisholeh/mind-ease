@@ -13,10 +13,44 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
+
+        // Create sample mood entries for preview
+        let calendar = Calendar.current
+
+        // Sample mood entry 1 (today)
+        let entry1 = MoodEntry(context: viewContext)
+        entry1.date = Date()
+        entry1.moodLevel = 4 // Good
+        entry1.notes = "Had a productive day at work and enjoyed a nice walk outside."
+        entry1.contextFactors = ["Work", "Exercise"]
+
+        // Sample mood entry 2 (yesterday)
+        let entry2 = MoodEntry(context: viewContext)
+        entry2.date = calendar.date(byAdding: .day, value: -1, to: Date())
+        entry2.moodLevel = 3 // Neutral
+        entry2.notes = "Feeling a bit tired today, but otherwise okay."
+        entry2.contextFactors = ["Sleep"]
+
+        // Sample mood entry 3 (two days ago)
+        let entry3 = MoodEntry(context: viewContext)
+        entry3.date = calendar.date(byAdding: .day, value: -2, to: Date())
+        entry3.moodLevel = 5 // Very Good
+        entry3.notes = "Great day! Caught up with friends and had a delicious dinner."
+        entry3.contextFactors = ["Social Interaction", "Nutrition"]
+
+        // Sample mood entry 4 (three days ago)
+        let entry4 = MoodEntry(context: viewContext)
+        entry4.date = calendar.date(byAdding: .day, value: -3, to: Date())
+        entry4.moodLevel = 2 // Bad
+        entry4.notes = "Stressful day at work with tight deadlines."
+        entry4.contextFactors = ["Work", "Stress"]
+
+        // Also create some sample items (original template data)
+        for _ in 0..<3 {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
         }
+
         do {
             try viewContext.save()
         } catch {
