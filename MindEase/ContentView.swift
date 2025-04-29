@@ -11,77 +11,136 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    // State for tab selection
+    @State private var selectedTab = 0
+
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            // Mood History Tab
+            MoodHistoryTab()
+                .environment(\.managedObjectContext, viewContext)
+                .tabItem {
+                    Label("Mood", systemImage: "heart.fill")
+                }
+                .tag(0)
+
+            // Insights Tab (placeholder for future implementation)
+            InsightsPlaceholderView()
+                .tabItem {
+                    Label("Insights", systemImage: "chart.bar.fill")
+                }
+                .tag(1)
+
+            // Settings Tab (placeholder for future implementation)
+            SettingsPlaceholderView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+                .tag(2)
+        }
+    }
+}
+
+/// Temporary Mood History Tab until we can properly integrate the MoodHistoryView
+struct MoodHistoryTab: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @State private var showingAddMood = false
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            VStack(spacing: 20) {
+                Image(systemName: "heart.text.square")
+                    .font(.system(size: 60))
+                    .foregroundColor(.blue)
+
+                Text("Mood Tracking")
+                    .font(.title)
+                    .fontWeight(.bold)
+
+                Text("Track your daily mood and see patterns over time")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+
+                Button(action: {
+                    showingAddMood = true
+                }) {
+                    HStack {
+                        Image(systemName: "plus.circle.fill")
+                        Text("Add Mood Entry")
                     }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
                 }
-                .onDelete(perform: deleteItems)
+                .padding(.top, 20)
             }
+            .padding()
+            .navigationTitle("Mood History")
             .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: {
+                        showingAddMood = true
+                    }) {
+                        Image(systemName: "plus")
                     }
                 }
             }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            .sheet(isPresented: $showingAddMood) {
+                Text("Add Mood Entry View")
+                    .padding()
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+/// Placeholder view for the Insights tab (to be implemented in future phases)
+struct InsightsPlaceholderView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "chart.bar.fill")
+                .font(.system(size: 60))
+                .foregroundColor(.blue)
+
+            Text("Insights Coming Soon")
+                .font(.title2)
+                .fontWeight(.medium)
+
+            Text("In the next update, you'll be able to see patterns and trends in your mood data.")
+                .font(.body)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        }
+        .padding()
+        .navigationTitle("Insights")
+    }
+}
+
+/// Placeholder view for the Settings tab (to be implemented in future phases)
+struct SettingsPlaceholderView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "gear")
+                .font(.system(size: 60))
+                .foregroundColor(.blue)
+
+            Text("Settings Coming Soon")
+                .font(.title2)
+                .fontWeight(.medium)
+
+            Text("In the next update, you'll be able to customize your MindEase experience.")
+                .font(.body)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        }
+        .padding()
+        .navigationTitle("Settings")
+    }
+}
 
 #Preview {
     ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
